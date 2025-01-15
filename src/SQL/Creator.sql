@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS Airport;
-USE Airport;
+CREATE DATABASE IF NOT EXISTS Airline;
+USE Airline;
 
 -- 创建 机场表 (Airport)
 CREATE TABLE Airport (
