@@ -8,14 +8,16 @@ import java.util.Date;
 public class Order {
     private String orderID;
     private String customerID;
+    private String buyerID;
     private String flightID;
     private String seatType;
     private String orderStatus;
-    private Date orderTime;
+    private String orderTime;
 
-    public Order(String orderID, String customerID, String flightID, String seatType, String orderStatus, Date orderTime) {
+    public Order(String orderID, String customerID, String buyerID, String flightID, String seatType, String orderStatus, String orderTime) {
         this.orderID = orderID;
         this.customerID = customerID;
+        this.buyerID = buyerID;
         this.flightID = flightID;
         this.seatType = seatType;
         this.orderStatus = orderStatus;
@@ -36,6 +38,14 @@ public class Order {
 
     public void setCustomerID(String customerID) {
         this.customerID = customerID;
+    }
+
+    public String getBuyerID() {
+        return buyerID;
+    }
+
+    public void setBuyerID(String buyerID) {
+        this.buyerID = buyerID;
     }
 
     public String getFlightID() {
@@ -62,11 +72,11 @@ public class Order {
         this.orderStatus = orderStatus;
     }
 
-    public Date getOrderTime() {
+    public String getOrderTime() {
         return orderTime;
     }
 
-    public void setOrderTime(Date orderTime) {
+    public void setOrderTime(String orderTime) {
         this.orderTime = orderTime;
     }
 
@@ -75,10 +85,11 @@ public class Order {
         return "Order{" +
                 "orderID='" + orderID + '\'' +
                 ", customerID='" + customerID + '\'' +
+                ", buyerID='" + buyerID + '\'' +
                 ", flightID='" + flightID + '\'' +
                 ", seatType='" + seatType + '\'' +
                 ", orderStatus='" + orderStatus + '\'' +
-                ", orderTime=" + orderTime +
+                ", orderTime='" + orderTime + '\'' +
                 '}';
     }
 }
